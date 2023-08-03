@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class SingleThreadArrayList<E> implements MyList<E> {
+    private final ArrayList<E> list;
+
+    public SingleThreadArrayList() {
+        list = new ArrayList<>();
+    }
+
+    @Override
+    public boolean add(E element) {
+        return list.add(element);
+    }
+
+    @Override
+    public E get(int index) {
+        return list.get(index);
+    }
+
+    @Override
+    public boolean remove(Object obj) {
+        return list.remove(obj);
+    }
+
+    @Override
+    public int size() {
+        return list.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+}
